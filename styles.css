@@ -1,0 +1,350 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', 'Roboto', 'Open Sans', sans-serif;
+    background-color: #1A1A1A;
+    color: #FFFFFF;
+    overflow-x: hidden;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.barra-lateral {
+    width: 250px;
+    background-color: #242424;
+    padding: 20px 0;
+    position: fixed;
+    height: 100vh;
+    z-index: 1000;
+}
+
+.perfil-usuario {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.avatar {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid #5CB85C;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.navegacao ul {
+    list-style: none;
+    padding: 0 20px;
+}
+
+.navegacao li {
+    margin-bottom: 10px;
+}
+
+.item-nav {
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+    color: #FFFFFF;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.item-nav i {
+    margin-right: 12px;
+    font-size: 16px;
+    width: 20px;
+}
+
+.item-nav.ativo {
+    background-color: #5CB85C;
+    color: #FFFFFF;
+}
+
+.item-nav:hover:not(.ativo) {
+    background-color: #333333;
+}
+
+.conteudo-principal {
+    margin-left: 250px;
+    padding: 30px;
+    width: calc(100% - 250px);
+    background-color: #1A1A1A;
+}
+
+.cabecalho {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.cabecalho h1 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+.icone-cabecalho {
+    color: #5CB85C;
+    font-size: 24px;
+}
+
+.container-pesquisa {
+    margin-bottom: 25px;
+}
+
+.barra-pesquisa {
+    position: relative;
+    max-width: 400px;
+}
+
+.barra-pesquisa i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999999;
+    font-size: 16px;
+}
+
+.barra-pesquisa input {
+    width: 100%;
+    padding: 12px 15px 12px 45px;
+    background-color: #333333;
+    border: none;
+    border-radius: 8px;
+    color: #FFFFFF;
+    font-size: 16px;
+    outline: none;
+}
+
+.barra-pesquisa input::placeholder {
+    color: #999999;
+}
+
+.botoes-filtro {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.botao-filtro {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    color: #FFFFFF;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+.botao-filtro.ansiedade {
+    background-color: #5BC0DE;
+}
+
+.botao-filtro.bem-estar {
+    background-color: #F0AD4E;
+}
+
+.botao-filtro.mindfulness {
+    background-color: #FF69B4;
+}
+
+.botao-filtro.autoconfianca {
+    background-color: #5CB85C;
+}
+
+.botao-filtro:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.titulo-secao {
+    margin-bottom: 25px;
+}
+
+.titulo-secao h3 {
+    font-size: 18px;
+    font-weight: 500;
+    color: #FFFFFF;
+}
+
+.grade-grupos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+}
+
+.card-grupo {
+    border-radius: 16px;
+    padding: 25px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-grupo:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.icone-card {
+    width: 60px;
+    height: 60px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.icone-card i {
+    font-size: 24px;
+    color: #FFFFFF;
+}
+
+.card-grupo h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #FFFFFF;
+}
+
+.card-grupo p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    color: #FFFFFF;
+    opacity: 0.9;
+}
+
+.botao-participar {
+    background-color: #5CB85C;
+    color: #FFFFFF;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 14px;
+    width: 100%;
+}
+
+.botao-participar:hover {
+    background-color: #5CB85C;
+    transform: translateY(-2px);
+}
+
+.circulo-serenidade {
+    background: linear-gradient(135deg, #2563eb 0%, #8b5cf6 50%, #06b6d4 100%);
+}
+
+.jornada-aceitacao {
+    background: linear-gradient(135deg, #fbbf24 0%, #f97316 50%, #ec4899 100%);
+}
+
+.conexoes-calma {
+    background: linear-gradient(135deg, #1d4ed8 0%, #7c3aed 50%, #312e81 100%);
+}
+
+.superando-desafios {
+    background: linear-gradient(135deg, #0f766e 0%, #134e4a 100%);
+}
+
+@media (max-width: 768px) {
+    .barra-lateral {
+        width: 200px;
+    }
+    
+    .conteudo-principal {
+        margin-left: 200px;
+        width: calc(100% - 200px);
+        padding: 20px;
+    }
+    
+    .cabecalho h1 {
+        font-size: 24px;
+    }
+    
+    .grade-grupos {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .botoes-filtro {
+        gap: 10px;
+    }
+    
+    .botao-filtro {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .barra-lateral {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    
+    .conteudo-principal {
+        margin-left: 0;
+        width: 100%;
+        padding: 15px;
+    }
+    
+    .container {
+        flex-direction: column;
+    }
+    
+    .navegacao ul {
+        display: flex;
+        overflow-x: auto;
+        padding: 0 10px;
+    }
+    
+    .navegacao li {
+        margin-right: 10px;
+        margin-bottom: 0;
+        flex-shrink: 0;
+    }
+    
+    .item-nav {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+    
+    .item-nav i {
+        margin-right: 6px;
+        font-size: 14px;
+    }
+}
