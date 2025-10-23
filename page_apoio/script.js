@@ -76,8 +76,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     navItems.forEach(item => {
         item.addEventListener('click', function(e) {
+            if (this.getAttribute('href') === '#') {
             e.preventDefault();
-            
+
             // remove classe ativa de todos os itens
             navItems.forEach(nav => nav.classList.remove('active'));
             
@@ -87,6 +88,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // Simula navegação
             const navText = this.querySelector('span').textContent;
             console.log(`Navegando para: ${navText}`);
+            }
         });
     });
 
