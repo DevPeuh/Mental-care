@@ -19,7 +19,6 @@ Interface moderna e responsiva
 
 Integração futura com profissionais da área de saúde mental
 
-📸 
 ## Tela inicial
 ![Screenshot do Mental Care](img/print_home.png)
 
